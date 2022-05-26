@@ -1,5 +1,16 @@
 ## PE-Protect-Antivirus-using-Machine-Learning
-This Antivirus is design to scan the PE Files (EXEs and DLLs) and show whether the file is malicious or benign. 5 models are used and best one is used automatically for detection. The tool is simple and GUI based.
+This Antivirus is design to scan the PE Files (EXEs and DLLs) and show whether the file is malicious or benign. 5 models are used and best one is used automatically for detection. The tool is simple and GUI based. Models used are:
+* DecisionTree
+* RandomForest 
+* GradientBoosting
+* AdaBoost 
+* GNB 
+
+## GUI
+![Results](https://github.com/Muhammad-Nouman-Ahmed/PE-Protect-Antivirus-using-Machine-Learning/blob/main/ezgif-2-76830175af.gif)
+
+## Model Training Results
+![Results](https://github.com/Muhammad-Nouman-Ahmed/PE-Protect-Antivirus-using-Machine-Learning/blob/main/train.PNG)
 
 ## Requirement
 * See reqirement.txt file
@@ -7,12 +18,10 @@ This Antivirus is design to scan the PE Files (EXEs and DLLs) and show whether t
 ## Note
 Unzip the file Data.zip to extract the csv.
 
+
 ## Google Form
 
 <button style="background-color: turquoise; border: none; border-radius: 5px; color: #333; padding: 15px 32px"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxR5JdOb_pjtQb48Ax8JbJfkbcCyCeYLBWxHQ02u7z5oKag/viewform?usp=sf_link" target="blank"> Fill the form for Questions, Queries and Suggestions</a></button>
-
-## Result
-![Results](https://github.com/Muhammad-Nouman-Ahmed/PE-Protect-Antivirus-using-Machine-Learning/blob/main/ezgif-2-76830175af.gif)
 
 
 ## Authors
