@@ -42,5 +42,5 @@ Unzip the file Data.zip to extract the csv.
 
 ## License
 
-Released under [Public](/LICENSE) by [@Muhammad-Nouman-Ahmed](https://github.com/Muhammad-Nouman-Ahmed).
+Released under [GPL-3.0 license](/LICENSE) by [@Muhammad-Nouman-Ahmed](https://github.com/Muhammad-Nouman-Ahmed).
 
