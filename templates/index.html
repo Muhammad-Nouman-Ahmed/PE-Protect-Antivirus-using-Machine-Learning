@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+  <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Document</title>
+  <style>
+    body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(120deg, #880088, #5533aa);
+  counter-reset: progress 98;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  border: 15px solid #222;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  box-shadow:
+    0px -8px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  margin: 3rem;
+  
+  animation: flare 3s infinite;
+}
+
+.circle::before,
+.circle::after,
+.progress::before {
+  content: "";
+  position: absolute;
+  border: 3px solid cyan;
+  border-radius: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: hollahop 6s infinite;
+}
+
+.circle::before {
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.progress::before {
+  animation-delay: 2.5s;
+  animation-duration: 8s;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 6.5;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 72px;
+  font-weight: 800;
+  color: rgb(255 255 255 / 70%);
+}
+
+.progress::after {
+  content: "PE🔒Protect";
+}
+
+@keyframes hollahop {
+  0% {
+    transform: rotate(0deg);
+    height: 100%;
+  }
+
+  50% {
+    height: 0%;
+  }
+
+  100% {
+    counter-increment: progress;
+    transform: rotate(360deg);
+    height: 100%;
+  }
+}
+
+
+@keyframes flare {
+  
+  25% {
+    box-shadow:
+    -8px 0px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  }
+  
+  50% {
+    box-shadow:
+    0px 8px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  }
+  
+  75% {
+    box-shadow:
+    8px 0px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  }
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  padding: 20px 10px;
+  border: 3px;
+  border-radius: 4px;
+  
+  
+  
+}
+.file-uploader img {
+  width: 100px;
+  
+  animation: hollahop 6s infinite;
+  
+}
+.file-uploader h2 {
+  margin: 10px 0 15px;
+  color: white;
+  font-size: 1.125rem;
+  letter-spacing: .5px;
+}
+.file-uploader input[type="file"] {
+  display: none;
+}
+.file-uploader label {
+  padding: 10px 30px;
+  border-radius: 6px;
+  background-color: white;
+  color: #3d3935;
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  
+}
+.file-uploader label:hover {
+  opacity: .8;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+  </style>
+</head>
+<body >
+  <div style="width:100%; display: flex;">
+    <div class="circle" >
+      <div class="progress"></div>
+    </div>
+    <div  id="container" style="width: 40%; margin-left:200px;">
+      <div class="file-uploader">
+        <img src="/static/cloud_image.png" alt="img_cloud">
+        <h2>File Upload</h2>
+        <form  action = "/result" method = "post" enctype="multipart/form-data">
+          <input class="glow-on-hover" style="color: black;"  type="submit" value="Proceed to upload!">
+      </form>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

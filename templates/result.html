@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/main.css">
+  <title>Document</title>
+  <style>
+    body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(120deg, #880088, #5533aa);
+  counter-reset: progress 98;
+}
+
+.circle {
+  border: 15px solid #222;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  box-shadow:
+    0px -8px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  margin: 10rem auto;
+  
+  animation: flare 3s infinite;
+}
+
+.circle::before,
+.circle::after,
+.progress::before {
+  content: "";
+  position: absolute;
+  border: 3px solid cyan;
+  border-radius: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: hollahop 6s infinite;
+}
+
+.circle::before {
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.progress::before {
+  animation-delay: 2.5s;
+  animation-duration: 8s;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 6.5;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 72px;
+  font-weight: 800;
+  color: rgb(255 255 255 / 70%);
+}
+
+.progress::after {
+  content: counter(progress) "%";
+}
+
+@keyframes hollahop {
+  0% {
+    transform: rotate(0deg);
+    height: 100%;
+  }
+
+  50% {
+    height: 0%;
+  }
+
+  100% {
+    counter-increment: progress;
+    transform: rotate(360deg);
+    height: 100%;
+  }
+}
+
+
+@keyframes flare {
+  
+  25% {
+    box-shadow:
+    -8px 0px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  }
+  
+  50% {
+    box-shadow:
+    0px 8px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  }
+  
+  75% {
+    box-shadow:
+    8px 0px 10px 5px #ffeb3b,
+    0 10px 39px 20px rgb(209 44 225 / 70%);
+  }
+}
+.sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 30%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1839,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 20%;
+  top: 80%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size: 6em;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.as{
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        width:30%;
+        position: relative;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+
+}
+@keyframes glowing {
+        0% {
+          background-color: black;
+          box-shadow: 0 0 5px white;
+        }
+        50% {
+          background-color: white;
+          color:black;
+          box-shadow: 0 0 20px black;
+        }
+        100% {
+          background-color: black;
+          box-shadow: 0 0 5px white;
+        }
+      }
+     .as {
+        animation: glowing 1700ms infinite;
+      }
+            .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    black 0%,
+    white 29%,
+    black 67%,
+    white 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 15px;
+      font-weight: bold;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+  </style>
+</head>
+<body>
+  <div style="width:100%; display: flex;">
+    <div  style="width: 70%;">
+      
+      <h1 class="as" style="color: black; background-color: white;"> Model Accuracy </h1>
+      <p style="color: white;">
+        »DecisionTree : 99.083665 % <br>
+        »RandomForest : 99.449475 % <br>
+        »GradientBoosting : 98.804781 % <br>
+        »AdaBoost : 98.688881 % <br>
+        »GNB : 70.195581 % <br>
+    </p>
+      <br>
+      
+      <h1 class="as" style="color: black; background-color: white;"> Best Model:</h1> 
+         <p style="color: white;"> {{disp2}} </p>
+      
+      <br>
+      
+      
+      <h1 style="color: black; background-color: white;">File: {{disp}}</h1>
+        <div class="sign">
+          <span class="flicker">{{disp1}}</span>
+        </div>
+      
+      
+    </div>
+    <div align="center" id="container" style="width: 30%; border: thick double white;">
+      <p style="color: black;background-color: white; font-size:18px; margin-top: 0px;">Main Features</p>
+      {% for content in disp3 %}
+					<p  style="color: white; font-size:13px; text-align:center;">{{content}} </p>
+					<hr>
+			{% endfor %}   
+    </div>
+    
+  </div>
+  
+</body>
+</html>
