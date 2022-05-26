@@ -11,6 +11,7 @@ This Antivirus is design to scan the PE Files (EXEs and DLLs) and show whether t
 
 ## Model Training Results
 ![Results](https://github.com/Muhammad-Nouman-Ahmed/PE-Protect-Antivirus-using-Machine-Learning/blob/main/train.PNG)
+![Results](https://github.com/Muhammad-Nouman-Ahmed/PE-Protect-Antivirus-using-Machine-Learning/blob/main/confusion.PNG)
 
 ## Requirement
 * See reqirement.txt file
