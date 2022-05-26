@@ -12,9 +12,8 @@ Unzip the file Data.zip to extract the csv.
 <button style="background-color: turquoise; border: none; border-radius: 5px; color: #333; padding: 15px 32px"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxR5JdOb_pjtQb48Ax8JbJfkbcCyCeYLBWxHQ02u7z5oKag/viewform?usp=sf_link" target="blank"> Fill the form for Questions, Queries and Suggestions</a></button>
 
 ## Result
-![Results](https://github.com/Muhammad-Nouman-Ahmed/Banner-Grabbing-through-sockets/blob/main/result1.PNG)
-![Results](https://github.com/Muhammad-Nouman-Ahmed/Banner-Grabbing-through-sockets/blob/main/result2.PNG)
-![Results](https://github.com/Muhammad-Nouman-Ahmed/Banner-Grabbing-through-sockets/blob/main/result3.PNG)
+![Results](https://github.com/Muhammad-Nouman-Ahmed/PE-Protect-Antivirus-using-Machine-Learning/blob/main/ezgif-2-76830175af.gif)
+
 
 ## Authors
 
